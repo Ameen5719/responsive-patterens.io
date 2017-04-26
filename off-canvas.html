@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    #wrap {
+        position: relative;
+    }
+
+    #c1,
+    #c2 {
+        height: 75vh;
+    }
+
+    #wrap.active {
+        right: 16em;
+    }
+
+    a.c2-link {
+        float: right;
+        display: block;
+        padding: 1em;
+    }
+
+    nav[role=navigation] {
+        background: #808080;
+        color: #fff;
+        padding: 1em;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .js nav[role=navigation] {
+        width: 16em;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -16em;
+    }
+
+    #c1 {
+        clear: both;
+    }
+
+    @media screen and (min-width: 48.25em) {
+        a.c2-link {
+            display: none;
+        }
+        .js nav[role=navigation] {
+            position: static;
+            float: right;
+            width: 30%;
+            height: 100%;
+        }
+        #wrap.active {
+            left: 0;
+        }
+        nav[role=navigation] ul {
+            margin: 0;
+            border: 0;
+        }
+        nav[role=navigation] li a {
+            border: 0;
+        }
+        #c1 {
+            clear: none;
+            margin-right: 30%;
+        }
+    }
+
+</style>
+<script>
+    $(document).ready(function() {
+        $('body').addClass('js');
+
+        var $menu = $('#c2'),
+            $menulink = $('.c2-link'),
+            $wrap = $('#wrap');
+
+        $menulink.click(function() {
+            $menulink.toggleClass('active');
+            $wrap.toggleClass('active');
+            return false;
+        });
+    });
+
+</script>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="navbar-brand">Responsive Patterns</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/mostly-fluid.html">Mostly Fluid</a></li>
+                <li><a href="/column-drop.html">Column Drop</a></li>
+                <li><a href="/layout-shifter.html">Layout Shifter</a></li>
+                <li class="active"><a href="/off-canvas.html">Off Canvas</a></li>
+                <li><a href="/4-equal-width-coulmn.html">4 EQL COL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-header text-center">
+        <h1>Layout Shifter</h1>
+    </div>
+    <div class="wrap" id="wrap">
+        <a href="#c2" class="page-header text-center c2-link">More</a>
+        <nav id="c2" role="navigation">
+            <h4>Secondary info</h4>
+        </nav>
+        <div id="c1" class="page-header text-center mod">
+            <h1>Primary info</h1>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

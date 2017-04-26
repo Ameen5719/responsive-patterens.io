@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    #wraper>div {
+        padding: 5px;
+        height: 50vh;
+    }
+
+    @media screen and (min-width: 44em) {
+        #wraper {
+            overflow: hidden;
+        }
+        #wraper>div {
+            float: left;
+            width: 50%;
+        }
+        #wraper>div:nth-child(odd) {
+            clear: left;
+        }
+    }
+
+    @media screen and (min-width: 64em) {
+        #wraper>div {
+            width: 25%;
+        }
+        #wraper>div:nth-child(odd) {
+            clear: none;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="navbar-brand">Responsive Patterns</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/mostly-fluid.html">Mostly Fluid</a></li>
+                <li><a href="/column-drop.html">Column Drop</a></li>
+                <li><a href="/layout-shifter.html">Layout Shifter</a></li>
+                <li><a href="/off-canvas.html">Off Canvas</a></li>
+                <li class="active"><a href="/4-equal-width-coulmn.html">4 EQL COL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-header text-center">
+        <h1>4 Equal Width Coulmn</h1>
+    </div>
+    <div id="wraper" class="row">
+        <div id="c1" class="page-header text-center">
+            <h2>First Content</h2>
+        </div>
+        <div id="c2" class="page-header text-center">
+            <h3>2nd content</h3>
+        </div>
+        <div id="c3" class="page-header text-center">
+            <h3>3rd content</h3>
+        </div>
+        <div id="c4" class="page-header text-center">
+            <h3>4th content</h3>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

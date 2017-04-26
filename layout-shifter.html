@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    #c1 {
+        height: 100vh;
+        width: 25vw;
+        float: left;
+    }
+
+    #c2,
+    #c3 {
+        height: 50vh;
+        width: 75vw;
+        float: right;
+    }
+
+    @media (max-width: 767px) {
+        #c1,
+        #c2,
+        #c3 {
+            height: 50vh;
+            width: 100vw;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="navbar-brand">Responsive Patterns</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/mostly-fluid.html">Mostly Fluid</a></li>
+                <li><a href="/column-drop.html">Column Drop</a></li>
+                <li class="active"><a href="/layout-shifter.html">Layout Shifter</a></li>
+                <li><a href="/off-canvas.html">Off Canvas</a></li>
+                <li><a href="/4-equal-width-coulmn.html">4 EQL COL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-header text-center">
+        <h1>Layout Shifter</h1>
+    </div>
+    <div class="row">
+        <div id="c1" class="page-header text-center">
+            <h2>Main Content</h2>
+        </div>
+        <div id="c2" class="page-header text-center">
+            <h3>Sub content</h3>
+        </div>
+        <div id="c3" class="page-header text-center">
+            <h3>sub content</h3>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

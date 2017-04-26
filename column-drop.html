@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    #c1 {
+        height: 75vh;
+    }
+
+    #c2,
+    #c3 {
+        height: 50vh;
+    }
+
+    @media screen and (min-width: 42em) {
+        #c1 {
+            width: 75%;
+            float: left;
+            padding: 0 1em 0 0;
+        }
+        #c2 {
+            float: left;
+            width: 25%;
+        }
+        #c3 {
+            clear: both;
+        }
+    }
+
+    @media screen and (min-width: 62em) {
+        #c1 {
+            width: 50%;
+            margin-left: 25%;
+            padding: 0 1em;
+        }
+        #c2 {
+            margin-left: -75%;
+        }
+        #c3 {
+            float: right;
+            width: 25%;
+            clear: none;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <div class="navbar-brand">Responsive Patterns</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/mostly-fluid.html">Mostly Fluid</a></li>
+                <li class="active"><a href="/column-drop.html">Column Drop</a></li>
+                <li><a href="/layout-shifter.html">Layout Shifter</a></li>
+                <li><a href="/off-canvas.html">Off Canvas</a></li>
+                <li><a href="/4-equal-width-coulmn.html">4 EQL COL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-header text-center">
+        <h1>Column Drop</h1>
+    </div>
+    <div class="row">
+        <div id="wraper">
+            <div class="page-header text-center" id="c1">
+                <h2>Main Content</h2>
+            </div>
+            <div class="page-header text-center" id="c2">
+                <h3>1st Column</h3>
+            </div>
+            <div class="page-header text-center" id="c3">
+                <h3>2st Column</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
